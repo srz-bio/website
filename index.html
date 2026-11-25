@@ -1,97 +1,39 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SRZ Bio</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap">
+<meta name="description" content="SRZ Bio is a three-person biotech company.">
+<link rel="canonical" href="https://srzbio.com">
 <style>
-/* Layout: one narrow column, lab-notebook feel: monospace margin labels, a plate-well motif in the hero */
-:root {
-  --bg: #f6f8f7; --fg: #14211d; --muted: #5a6b65; --line: #d5ded9; --accent: #0f7a5c; --well: #e3ebe7;
-  --display: "Fraunces", Georgia, serif; --body: "IBM Plex Sans", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
-}
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #0f1614; --fg: #e4ece8; --muted: #93a59e; --line: #26332f; --accent: #4cc39b; --well: #1b2522; color-scheme: dark } }
-:root[data-theme="dark"] { --bg: #0f1614; --fg: #e4ece8; --muted: #93a59e; --line: #26332f; --accent: #4cc39b; --well: #1b2522; color-scheme: dark }
-body { background: var(--bg); color: var(--fg); font: 16px/1.6 var(--body); }
-.wrap { max-width: 760px; margin: 0 auto; padding-block: 2rem 4rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 3.5rem; }
-nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-.logo { font: 700 1.4rem var(--display); letter-spacing: -.01em; }
-.logo span { color: var(--accent); }
-nav a { color: var(--muted); text-decoration: none; margin-left: 1.2rem; font-size: .95rem; }
-nav a:hover, nav a:focus-visible { color: var(--accent); }
-.hero { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; }
-h1 { font: 500 clamp(2.2rem, 6vw, 3.4rem)/1.08 var(--display); margin: 0 0 1rem; text-wrap: balance; letter-spacing: -.02em; }
-.lede { color: var(--muted); font-size: 1.1rem; max-width: 34rem; margin: 0; }
-.plate { display: grid; grid-template-columns: repeat(6, 18px); gap: 6px; }
-.plate i { width: 18px; height: 18px; border-radius: 50%; background: var(--well); }
-.plate i.on { background: var(--accent); }
-.label { font: 400 .75rem var(--mono); text-transform: uppercase; letter-spacing: .1em; color: var(--accent); margin: 0 0 .75rem; }
-h2 { font: 500 1.6rem/1.2 var(--display); margin: 0 0 1rem; text-wrap: balance; }
-section p { margin: 0 0 1rem; max-width: 62ch; }
-.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
-.cols div { border-top: 1px solid var(--line); padding-top: 1rem; min-width: 0; }
-.cols h3 { font: 500 1rem var(--body); margin: 0 0 .3rem; }
-.cols p { color: var(--muted); font-size: .95rem; margin: 0; }
-.team { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; }
-.person { display: grid; gap: .2rem; }
-.avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--well); display: grid; place-items: center; font: 500 1.1rem var(--display); color: var(--accent); margin-bottom: .5rem; }
-.person b { font-weight: 500; }
-.person span { color: var(--muted); font-size: .9rem; }
-.contact { border: 1px solid var(--line); border-radius: 6px; padding: 1.5rem; }
-.email { font: 400 1.05rem var(--mono); color: var(--fg); user-select: all; }
-footer { color: var(--muted); font: 400 .8rem var(--mono); border-top: 1px solid var(--line); padding-top: 1rem; }
-@media (max-width: 560px) { .hero { grid-template-columns: 1fr; } .plate { display: none; } nav a { margin: 0 1rem 0 0; } }
+  body { max-width: 640px; margin: 70px auto; padding: 0 20px; font: 17px/1.55 Georgia, "Times New Roman", serif; color: #111; background: #fff; }
+  h1 { font-size: 1.4em; margin: 0 0 2px; }
+  p { margin: 0 0 1em; }
+  .sig { margin-top: 2em; }
+  a { color: inherit; }
+  @media (prefers-color-scheme: dark) { body { color: #e8e8e8; background: #111; } }
 </style>
-</head><body>
+</head>
+<body>
+<h1>SRZ Bio</h1>
+<p><b>Serious about biology.</b></p>
 
-<div class="wrap">
-  <nav>
-    <div class="logo">SRZ<span>.</span>Bio</div>
-    <div><a href="#work">Work</a><a href="#team">Team</a><a href="#contact">Contact</a></div>
-  </nav>
+<p>SRZ Bio is a biotech company of three people.</p>
 
-  <header class="hero">
-    <div>
-      <p class="label">Biotech · Founded 2026</p>
-      <h1>Small team. Serious biology.</h1>
-      <p class="lede">SRZ Bio is a three-person company turning careful bench science into tools that work outside the lab.</p>
-    </div>
-    <div class="plate" aria-hidden="true">
-      <i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i>
-      <i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i>
-      <i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i>
-      <i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i>
-    </div>
-  </header>
+<!-- TODO: replace with one or two sentences on what SRZ Bio actually works on. -->
+<p>We work on [what we work on].</p>
 
-  <section id="work">
-    <p class="label">What we do</p>
-    <h2>From hypothesis to working prototype</h2>
-    <p>We are early. We run tight experiments, publish what we learn, and only build what the data supports. More detail on our programs is coming soon.</p>
-    <div class="cols">
-      <div><h3>Research</h3><p>Focused questions with clear readouts, n &gt; 3, replicated before we believe it.</p></div>
-      <div><h3>Platform</h3><p>Reusable assays and data pipelines so each experiment makes the next one faster.</p></div>
-      <div><h3>Partnerships</h3><p>We work with academic labs and clinicians who want a fast, small collaborator.</p></div>
-    </div>
-  </section>
+<p>We are small on purpose. A small team moves fast, argues honestly about data, and builds only what the experiments support.</p>
 
-  <section id="team">
-    <p class="label">Team of three</p>
-    <h2>The people</h2>
-    <div class="team">
-      <div class="person"><div class="avatar">S</div><b>Founder one</b><span>Co-founder · Science</span></div>
-      <div class="person"><div class="avatar">R</div><b>Founder two</b><span>Co-founder · Engineering</span></div>
-      <div class="person"><div class="avatar">Z</div><b>Founder three</b><span>Co-founder · Operations</span></div>
-    </div>
-  </section>
+<p>If you are a scientist, clinician, or investor who wants to work with us, we would like to hear from you.</p>
 
-  <section id="contact" class="contact">
-    <p class="label">Get in touch</p>
-    <h2>Talk to us</h2>
-    <p>Collaborators, investors and curious scientists are all welcome.</p>
-    <p class="email">hello@srzbio.com</p>
-  </section>
+<p><a href="mailto:hello@srzbio.com">hello@srzbio.com</a></p>
 
-  <footer>© 2026 SRZ Bio</footer>
-</div>
-</body></html>
+<p class="sig">
+[Founder one]<br>
+[Founder two]<br>
+[Founder three]
+</p>
+</body>
+</html>
